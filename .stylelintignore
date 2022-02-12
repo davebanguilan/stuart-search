@@ -1,0 +1,5 @@
+src/assets/typography
+src/assets/icons
+src/assets/images
+*.log
+*.sql
