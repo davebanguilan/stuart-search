@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "482375383741",
+    "project_id": "stuart-search",
+    "storage_bucket": "stuart-search.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482375383741:android:da5fed452b0830dc56d5d4",
+        "android_client_info": {
+          "package_name": "com.davebanguilan.stuartsearch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482375383741-aph8ojn06mcp1pnih1998mh9uovdg0nr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9zYy38vGkDwOkZ5co0WbpO8J_AIn0nkA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482375383741-aph8ojn06mcp1pnih1998mh9uovdg0nr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
