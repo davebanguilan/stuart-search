@@ -1,16 +1,12 @@
-import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { TabMainPage } from './tab-main.page';
 
 import { TabMainPageRoutingModule } from './tab-main-routing.module';
+import { SharedModule } from '../_shared';
 
 @NgModule({
   imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
+    SharedModule,
     TabMainPageRoutingModule
   ],
   declarations: [TabMainPage]
