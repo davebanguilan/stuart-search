@@ -9,13 +9,16 @@ export class PlantService {
   constructor(
   ) {}
 
-    setSelectedPlant(selectedPlant: string): void {
-        this.selectedPlant = selectedPlant;
-    }
+  setSelectedPlant(selectedPlant: string): void {
+	this.selectedPlant = selectedPlant;
+  }
 
-    getSelectedPlantDetails(): Plant {
-        return {
-            commonName: this.selectedPlant,
-        }
-    }
+  getSelectedPlantDetails(): Plant {
+    return {
+      commonName: this.selectedPlant,
+	};
+  }
+
 }
+
+
