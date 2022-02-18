@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ROUTEURL, TOAST_MESSAGE } from '../_shared/constants';
 import { Plant } from '../_shared/models';
-import { PlantService } from '../_shared/services';
+import { FirebaseStorageService, PlantService, ToastService } from '../_shared/services';
 
 @Component({
   selector: 'app-plant',
@@ -10,13 +12,39 @@ import { PlantService } from '../_shared/services';
 export class PlantPage implements OnInit {
 
   plantDetails: Plant;
+  showPage = false;
+  imageLoading: boolean;
+  plantImage: string;
 
   constructor(
-    private plantService: PlantService
+    private plantService: PlantService,
+    private firebaseStorageService: FirebaseStorageService,
+    private router: Router,
+    private toastService: ToastService
   ) { }
 
-  ngOnInit() {
-    this.plantDetails = this.plantService.getSelectedPlantDetails();
+  ngOnInit(): void {
+    this.initialize();
+  }
+
+  initialize(): void {
+    this.showPage = false;
+    this.plantService.getSelectedPlantDetails().then((data) => {
+      if(!!data) {
+        this.plantDetails = data;
+        this.imageLoading = true;
+        this.firebaseStorageService.getImage(`images/${this.plantDetails.commonName}.png`).then((url) => {
+          this.plantImage = url;
+        }).finally(() => {
+          this.imageLoading = false;
+        });
+      } else {
+        this.toastService.showErrorToast(TOAST_MESSAGE.plantNotFound);
+        this.router.navigateByUrl(ROUTEURL.function);
+      }
+    }).finally(() => {
+      this.showPage = true;
+    });
   }
 
 }

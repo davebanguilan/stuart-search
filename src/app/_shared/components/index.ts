@@ -1,1 +1,1 @@
-export * from './pa-list/pa-list.component';
+export * from './header/header.component';

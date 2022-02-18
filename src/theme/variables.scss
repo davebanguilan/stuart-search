@@ -4,7 +4,7 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #4ED99C;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -52,7 +52,7 @@
   --ion-color-danger-tint: #ed576b;
 
   /** dark **/
-  --ion-color-dark: #222428;
+  --ion-color-dark: #557174;
   --ion-color-dark-rgb: 34, 36, 40;
   --ion-color-dark-contrast: #ffffff;
   --ion-color-dark-contrast-rgb: 255, 255, 255;
@@ -74,6 +74,14 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  //ADDED DESIGNS
+
+  --ion-font-family: 'Montserrat';
+  --ion-background-color: #F6FAF7;
+
+  --ion-tab-bar-color: #C7CFB7;
+  --ion-tab-bar-color-selected: #4ED99C;
 }
 
 // @media (prefers-color-scheme: dark) {
