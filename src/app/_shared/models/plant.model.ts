@@ -1,7 +1,8 @@
 export interface Plant {
   commonName?: string;
+  englishName?: string;
   scientificName?: string;
-  parts?: string;
-  description?: string;
+  plantPartUsed?: string;
+  preparation?: string;
   pharmacologicalActivity?: string;
 }

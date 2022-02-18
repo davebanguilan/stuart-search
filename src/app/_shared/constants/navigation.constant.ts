@@ -5,12 +5,14 @@ export const PATHURL = {
     // TABS
     tabs: 'tabs',
     main: 'main',
-    function: 'function'
+    function: 'function',
+    paList: 'pa-list'
 };
 
 export const ROUTEURL = {
     plant: `${PATHURL.plant}`,
     tabs: `${PATHURL.tabs}`,
     main: `${PATHURL.tabs}/${PATHURL.main}`,
-    function: `${PATHURL.tabs}/${PATHURL.tabs}`
+    function: `${PATHURL.tabs}/${PATHURL.function}`,
+    paList: `${PATHURL.paList}`
 };

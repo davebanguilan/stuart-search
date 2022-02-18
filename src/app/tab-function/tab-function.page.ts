@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Data } from '@angular/router';
-import { MAP_PA } from '../_shared/constants';
+import { Data, Router } from '@angular/router';
+import { ROUTEURL } from '../_shared/constants';
 import { PaListService } from '../_shared/services';
 
 @Component({
@@ -9,32 +9,22 @@ import { PaListService } from '../_shared/services';
   styleUrls: ['tab-function.page.scss']
 })
 export class TabFunctionPage {
-
-  showPAList: boolean;
   choices: Data[];
-  paSelected: string[];
-  paListTitle: string;
 
   constructor(
-    private paListService: PaListService
+    private paListService: PaListService,
+    private router: Router
   ) {}
 
   ionViewWillEnter(): void {
-    this.showPAList = false;
+    this.choices = [];
     this.choices = this.paListService.paList;
-    this.paSelected = [];
-    this.paListTitle = '';
   }
-
 
   activitySelected($event: any): void {
-    this.paSelected = MAP_PA[$event.target.value];
-    this.paListTitle = $event.target.value;
-    this.showPAList = true;
-  }
-
-  showFunctionPage(): void {
-    this.showPAList = false;
+    this.paListService.setPaTitle($event.target.value);
+    this.paListService.setPaSelected($event.target.value);
+    this.router.navigateByUrl(ROUTEURL.paList);
   }
 
 }

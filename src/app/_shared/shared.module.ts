@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { PaListComponent } from './components';
+import { HeaderComponent } from './components';
 
 export const components = [
-  PaListComponent
+  HeaderComponent
 ];
 
 export const directives = [

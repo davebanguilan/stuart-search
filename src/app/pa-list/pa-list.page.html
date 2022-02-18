@@ -1,0 +1,9 @@
+<app-header [title]="title" [currentPage]="'pa-list'"></app-header>
+
+<ion-content fullscreen="true" class="content__container">
+  <ion-item *ngFor="let plant of pharmacologicalActivity" button (click)="viewPlantDetails(plant)">
+    <ion-label>
+      {{plant}}
+    </ion-label>
+  </ion-item>
+</ion-content>
