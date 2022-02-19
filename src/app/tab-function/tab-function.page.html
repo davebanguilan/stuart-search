@@ -3,15 +3,16 @@
     <ion-col size="12">
       <ion-item>
         <ion-icon slot='start' name="search-outline"></ion-icon>
-        <ion-label position="floating">Search</ion-label>
-        <ion-input></ion-input>
+        <ion-label position="floating">Search Common Name</ion-label>
+        <ion-input [(ngModel)]="searchValue" [pattern]="text" (ionFocus)="inputInFocus()"></ion-input>
       </ion-item>
+      <p *ngIf="showErrorMessage"><ion-text color="danger">{{errorMessage}}</ion-text></p>
     </ion-col>
 
     <ion-col size="12">
       <ion-item>
         <ion-label position="floating">Select Pharmacological Activity</ion-label>
-        <ion-select (ionChange)="activitySelected($event)">
+        <ion-select [(ngModel)]="selectedValue" (ionChange)="activitySelected($event)">
           <ion-select-option *ngFor="let choice of choices" [value]="choice.value">{{choice.text}}</ion-select-option>
         </ion-select>
       </ion-item>
@@ -22,7 +23,7 @@
     </ion-col>
 
     <ion-col size="12">
-      <ion-button expand="full" shape="round">
+      <ion-button expand="full" shape="round" (click)="search()">
         Search
         <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
       </ion-button>
