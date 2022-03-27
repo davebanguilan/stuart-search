@@ -8,7 +8,7 @@ export class FirebaseStorageService {
   async getImage(path: string): Promise<string> {
     try {
       let url = '';
-      const modifiedPath = path.toLowerCase().replace(' ', '_');
+      const modifiedPath = path.toLowerCase().replace(/\s/g, '_');
       const task = await this.fireStorage
         .ref(modifiedPath);
 

@@ -11,7 +11,7 @@ import { PaListService, PlantService } from '../_shared/services';
 })
 export class TabFunctionPage {
   choices: Data[];
-  selectedValue = '';
+  selectedValue: string;
   showErrorMessage = false;
   errorMessage: string;
   searchValue: string;
@@ -23,6 +23,7 @@ export class TabFunctionPage {
   ) {}
 
   ionViewWillEnter(): void {
+    this.selectedValue = '';
     this.choices = this.paListService.paList;
   }
 
