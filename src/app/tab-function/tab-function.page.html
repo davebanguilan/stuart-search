@@ -1,16 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-grid class="function">
+  <ion-row class="function__container">
+    <ion-col size="12">
+      <ion-item>
+        <ion-icon slot='start' name="search-outline"></ion-icon>
+        <ion-label position="floating">Search Common Name</ion-label>
+        <ion-input [(ngModel)]="searchValue" [pattern]="text" (ionFocus)="inputInFocus()"></ion-input>
+      </ion-item>
+      <p *ngIf="showErrorMessage"><ion-text color="danger">{{errorMessage}}</ion-text></p>
+    </ion-col>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-col size="12">
+      <ion-item>
+        <ion-label position="floating">Select Pharmacological Activity</ion-label>
+        <ion-select [(ngModel)]="selectedValue" (ionChange)="activitySelected($event)">
+          <ion-select-option *ngFor="let choice of choices" [value]="choice.value">{{choice.text}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
 
-</ion-content>
+    <ion-col class="box__spacer--4">
+
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-button expand="full" shape="round" (click)="search()">
+        Search
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

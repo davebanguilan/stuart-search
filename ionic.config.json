@@ -1,5 +1,7 @@
 {
   "name": "stuart-search",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

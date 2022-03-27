@@ -2,8 +2,10 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './components';
 
 export const components = [
+  HeaderComponent
 ];
 
 export const directives = [

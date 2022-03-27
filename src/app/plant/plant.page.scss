@@ -1,0 +1,31 @@
+.plant_container {
+  font-size: 1.1rem;
+
+  .box__spacer-2 {
+    margin-bottom: 2rem;
+  }
+
+  ion-label {
+    font-weight: bold;
+  }
+  
+  .scientific_name {
+    font-style: italic;
+  }
+}
+
+
+.spin{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+ion-spinner {
+  width: 4rem;
+  height: 4rem;
+}
+
+
+

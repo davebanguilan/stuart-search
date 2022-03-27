@@ -1,0 +1,18 @@
+.function {
+  justify-content: center;
+	display: flex !important;
+ 	align-items: center !important;
+	height: 100vh;
+
+  &__container {
+    padding: 2rem;
+  }
+
+  .box__spacer--4 {
+    margin-bottom: 4rem;
+  }
+  
+  ion-label {
+    color: var(--ion-color-light-shade);
+  }
+}
