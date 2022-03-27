@@ -31,22 +31,6 @@ export class PlantService {
       return null;
     }
   }
-
-  // For uploading list of plants in firebase
-  // async uploadPlants(plants: Plant[]): Promise<void> {
-  //   try {
-  //     const plantsCollectionRef:  AngularFirestoreCollection<Plant> =
-  //     this.firestore.collection<Plant>(`${COLLECTION.plants}`);
-  //     plants.map((p) => {
-  //       console.log(p);
-  //       plantsCollectionRef.add(p);
-  //     });
-  //   }
-  //   catch (e) {
-  //     console.log(e);
-  //   }
-  // }
-
 }
 
 
