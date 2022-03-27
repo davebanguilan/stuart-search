@@ -23,12 +23,12 @@ export class HeaderComponent implements OnInit {
     if(this.currentPage === ROUTEURL.plant) {
       this.router.navigateByUrl(ROUTEURL.paList);
     } else {
-      this.router.navigateByUrl(ROUTEURL.function);
+      this.router.navigateByUrl(ROUTEURL.main);
     }
   }
 
   returnToHome(): void {
-    this.router.navigateByUrl(ROUTEURL.function);
+    this.router.navigateByUrl(ROUTEURL.main);
   }
 
 }
