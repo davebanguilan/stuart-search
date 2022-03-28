@@ -22,15 +22,15 @@ export const PHARMACOLOGICAL_ACTIVITY: Data[] = [
     value: 'antiDiarrheal',
   },
   {
-    text: 'ANTIHELMENTIC,',
+    text: 'ANTIHELMENTIC',
     value: 'antiHelmentic',
   },
   {
-    text: 'ANTI-INFLAMATORY,',
+    text: 'ANTI-INFLAMATORY',
     value: 'antiInflamatory',
   },
   {
-    text: 'ANTIMICROBIAL,',
+    text: 'ANTIMICROBIAL',
     value: 'antiMicrobial',
   },
   {

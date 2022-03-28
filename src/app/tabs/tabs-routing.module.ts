@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('../tab-function/tab-function.module').then(m => m.TabFunctionPageModule)
       },
       {
+        path: 'about',
+        loadChildren: () => import('../tab-about/tab-about.module').then( m => m.TabAboutPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/main',
         pathMatch: 'full'
